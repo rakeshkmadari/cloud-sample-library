@@ -3,4 +3,9 @@
   <groupId>company.samples</groupId>
   <artifactId>DummyProject</artifactId>
   <version>1.0.0</version>
+  <properties>
+    ...
+      <sap.cloud.sdk.path>${project.build.directory}/sdk</sap.cloud.sdk.path>
+    ...
+  </properties>
 </project>
