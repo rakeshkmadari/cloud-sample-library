@@ -3,6 +3,29 @@
   <groupId>company.samples</groupId>
   <artifactId>DummyProject</artifactId>
   <version>1.0.0</version>
+  <profile>
+    <id>local-integration-tests</id>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>com.sap.cloud</groupId>
+          <artifactId>${sap.cloud.sdk.plugin}</artifactId>
+          <executions>
+            ...
+            <execution>
+              <phase>initialize</phase>
+              <goals>
+                <goal>install-sdk</goal>
+              </goals>
+            </execution>
+            ...
+          </executions>
+          ...
+        </plugin>
+        ...
+      </plugins>
+    </build>
+  </profile>
   <properties>
     ...
       <sap.cloud.sdk.path>${project.build.directory}/sdk</sap.cloud.sdk.path>
